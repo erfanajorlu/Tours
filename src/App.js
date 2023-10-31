@@ -38,9 +38,14 @@ function App() {
   }
   if (tours.length === 0) {
     return (
-      <main className="w-9/12 mx-auto flex justify-center items-center font-extrabold text-4xl my-12">
-        <div>
-          <h2>No Tours Left</h2>
+      <main className="w-full font-extrabold text-4xl my-12">
+        <div className="flex justify-center items-center">
+          <h2 className="mx-auto my-12">No Tours Left</h2>
+        </div>
+        <div className="flex justify-center items-center">
+          <button className="border rounded-lg bg-blue-500 text-white font-semibold text-lg w-20" onClick={()=> fetchData()}>
+            Refresh
+          </button>
         </div>
       </main>
     );
